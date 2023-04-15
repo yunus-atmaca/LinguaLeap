@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 
 import { createStackNavigator } from '@react-navigation/stack'
-import { HomeStack } from '@src/types/navigation'
+import { HomeParamList } from '@src/types/navigation'
 
-const Stack = createStackNavigator<HomeStack>()
+const Stack = createStackNavigator<HomeParamList>()
 
 import { Home, Games } from '@src/screens'
 

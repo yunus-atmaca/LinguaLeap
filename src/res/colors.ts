@@ -9,7 +9,7 @@ export const COLORS = {
   lBlue: '#6eedf3',
   llBlue: '#a5f2f0',
   dBlue: '#016fca',
-  blue: ' #0091cc',
+  blue: '#0091cc',
   red: '#fa4026',
   grey: 'grey',
   grey1: '#DFDFDF',
@@ -21,4 +21,3 @@ export const COLORS = {
   grey7: '#6B6B6B',
   grey8: '#212121',
 }
-

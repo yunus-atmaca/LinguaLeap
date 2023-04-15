@@ -1,39 +1,44 @@
 import type { StackScreenProps } from '@react-navigation/stack'
-import type { NavigationProp } from '@react-navigation/core'
-import type { CompositeScreenProps } from '@react-navigation/native'
+import type {
+  CompositeScreenProps,
+  NavigatorScreenParams,
+} from '@react-navigation/native'
 import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs'
 import { createNavigationContainerRef } from '@react-navigation/native'
 import { NavigationContainerRefWithCurrent } from '@react-navigation/core'
 
-export type HomeStack = {
+export type StackParamList = {}
+
+/*export type RootParamList = {
+  HomeNav: NavigatorScreenParams<HomeParamList>
+  ProfileNav: NavigatorScreenParams<ProfileParamList>
+}*/
+
+export type RootParamList = {
+  HomeNav: HomeParamList
+  ProfileNav: ProfileParamList
+}
+
+export type HomeParamList = {
   Home: undefined
   Games: undefined
 }
 
-export type ProfileStack = {
+export type ProfileParamList = {
   Profile: undefined
   Settings: undefined
 }
 
-export type RootRoutes = {
-  HomeTab: HomeStack
-  ProfileTab: ProfileStack
-}
-
-export type AllRoutes = RootRoutes
-export type RouteProp = NavigationProp<AllRoutes>
-
-//All routes screen props creator
 export type ScreenPropsCreator<
-  K extends keyof RootRoutes,
-  T extends keyof RootRoutes[K],
+  K extends keyof RootParamList,
+  T extends keyof RootParamList[K],
 > = CompositeScreenProps<
-  BottomTabScreenProps<RootRoutes, K>,
-  StackScreenProps<RootRoutes[K], T>
+  BottomTabScreenProps<RootParamList, K>,
+  StackScreenProps<RootParamList[K], T>
 >
 
-export const _navRef = createNavigationContainerRef<RootRoutes>()
+export const _navRef = createNavigationContainerRef<RootParamList>()
 export const getNavigationRef =
-  (): NavigationContainerRefWithCurrent<RootRoutes> => {
+  (): NavigationContainerRefWithCurrent<RootParamList> => {
     return _navRef
   }

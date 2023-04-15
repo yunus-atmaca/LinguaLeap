@@ -1,23 +1,29 @@
 import React, { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationState, NavigationContainer } from '@react-navigation/native'
 
-import { RootRoutes } from '@src/types/navigation'
-//import { TabBar } from '@src/components'
+import { RootParamList, getNavigationRef } from '@src/types/navigation'
+import { TabBar } from '@src/components'
 
-const Tab = createBottomTabNavigator<RootRoutes>()
+const Tab = createBottomTabNavigator<RootParamList>()
 
 import ProfileStackNav from './ProfileStackNav'
 import HomeStackNav from './HomeStackNav'
 
 const RootNav: FC = () => {
+  const _onStateChange = (state: NavigationState | undefined) => {
+    //console.debug('navigation state -> ', state?.routeNames, state?.index)
+  }
+
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      ref={getNavigationRef()}
+      onStateChange={_onStateChange}>
       <Tab.Navigator
-        //tabBar={p => <TabBar {...p} />}
+        tabBar={p => <TabBar {...p} />}
         screenOptions={{ headerShown: false }}>
-        <Tab.Screen name={'HomeTab'} component={HomeStackNav} />
-        <Tab.Screen name={'ProfileTab'} component={ProfileStackNav} />
+        <Tab.Screen name={'HomeNav'} component={HomeStackNav} />
+        <Tab.Screen name={'ProfileNav'} component={ProfileStackNav} />
       </Tab.Navigator>
     </NavigationContainer>
   )
