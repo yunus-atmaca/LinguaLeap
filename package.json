@@ -15,8 +15,10 @@
   "dependencies": {
     "@gorhom/portal": "^1.0.14",
     "@react-native-community/async-storage": "^1.12.1",
+    "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
+    "@react-navigation/stack": "^6.3.16",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/redux-logger": "^3.0.9",
     "add": "^2.0.6",
