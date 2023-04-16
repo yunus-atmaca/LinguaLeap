@@ -1,16 +1,18 @@
 import React, { FC } from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationState, NavigationContainer } from '@react-navigation/native'
 
-import { RootParamList, getNavigationRef } from '@src/types/navigation'
-import { TabBar } from '@src/components'
+import { RootStackParams, getNavigationRef } from '@src/types/navigation'
+import { useAppSelector } from '@src/types/store'
+import { SUser } from '@src/store/selector'
+import { UserInfo, Proficiency } from '@src/screens'
+import MainTabNav from './MainTabNav'
 
-const Tab = createBottomTabNavigator<RootParamList>()
-
-import ProfileStackNav from './ProfileStackNav'
-import HomeStackNav from './HomeStackNav'
+const Stack = createStackNavigator<RootStackParams>()
 
 const RootNav: FC = () => {
+  const proficiency = useAppSelector(SUser.proficiency)
+
   const _onStateChange = (state: NavigationState | undefined) => {
     //console.debug('navigation state -> ', state?.routeNames, state?.index)
   }
@@ -19,12 +21,15 @@ const RootNav: FC = () => {
     <NavigationContainer
       ref={getNavigationRef()}
       onStateChange={_onStateChange}>
-      <Tab.Navigator
-        tabBar={p => <TabBar {...p} />}
+      <Stack.Navigator
+        initialRouteName={
+          proficiency === 'Undefined' ? 'Proficiency' : 'MainTab'
+        }
         screenOptions={{ headerShown: false }}>
-        <Tab.Screen name={'HomeNav'} component={HomeStackNav} />
-        <Tab.Screen name={'ProfileNav'} component={ProfileStackNav} />
-      </Tab.Navigator>
+        <Stack.Screen name={'Proficiency'} component={Proficiency} />
+        <Stack.Screen name={'UserInfo'} component={UserInfo} />
+        <Stack.Screen name={'MainTab'} component={MainTabNav} />
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }

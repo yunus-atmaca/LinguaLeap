@@ -5,7 +5,6 @@ export const selectUser = (state: RootState) => {
   return state.userController
 }
 
-//s = select
-export const sProficiency = createSelector(selectUser, c => c.proficiency)
-export const sNLanguage = createSelector(selectUser, c => c.nLanguage)
-export const sSLanguage = createSelector(selectUser, c => c.sLanguage)
+export const proficiency = createSelector(selectUser, c => c.proficiency)
+export const nLanguage = createSelector(selectUser, c => c.nLanguage)
+export const sLanguage = createSelector(selectUser, c => c.sLanguage)

@@ -20,16 +20,16 @@ const initialState: State = {
 }
 
 const {
-  actions: { setState },
+  actions: { setUserState },
   reducer,
 } = createSlice({
   name,
   initialState: initialState,
   reducers: {
-    setState: (state, action: PayloadAction<Partial<State>>) => {
+    setUserState: (state, action: PayloadAction<Partial<State>>) => {
       return { ...state, ...action.payload }
     },
   },
 })
 
-export { reducer, setState }
+export { reducer, setUserState }

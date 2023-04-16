@@ -1,3 +1,4 @@
-import { COLORS } from './colors'
+import { ALFA, COLORS } from './colors'
+import * as STYLES from './styles'
 
-export { COLORS }
+export { ALFA, COLORS, STYLES }

@@ -1,3 +1,17 @@
+export const ALFA = {
+  p10: '1A',
+  p20: '33',
+  p25: '40',
+  p30: '4D',
+  p40: '66',
+  p50: '80',
+  p60: '99',
+  p70: 'B3',
+  p75: 'BF',
+  p80: 'CC',
+  p90: 'E6',
+}
+
 export const COLORS = {
   black: '#030505',
   lGreen: '#2ae646',
