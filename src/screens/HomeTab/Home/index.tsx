@@ -11,7 +11,7 @@ const Home: FC = () => {
   return (
     <PageContainer style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Section />
+        <Section title="Games" />
       </ScrollView>
     </PageContainer>
   )

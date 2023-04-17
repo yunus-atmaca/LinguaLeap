@@ -29,7 +29,7 @@ const description = {
 
 const Level: FC<Props> = ({ containerStyle, contentStyle, name }) => {
   const onClick = () => {
-    getNavigationRef().navigate('MainTab')
+    getNavigationRef().navigate('MainStackNav')
   }
 
   const getBackgroundColor = () => {
