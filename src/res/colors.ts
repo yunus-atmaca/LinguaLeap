@@ -35,3 +35,27 @@ export const COLORS = {
   grey7: '#6B6B6B',
   grey8: '#212121',
 }
+
+export const randomColor = () => {
+  const c = [
+    '#2ae646',
+    '#009368',
+    '#005b60',
+    '#fa4026',
+    '#6eedf3',
+    '#016fca',
+    '#0091cc',
+  ]
+
+  return c[Math.floor(Math.random() * c.length)]
+}
+
+//random color with random alpha
+export const RCWithRA = () => {
+  const rc = randomColor()
+
+  const a = ['1A', '33', '40', '4D', '66']
+  const ra = a[Math.floor(Math.random() * a.length)]
+
+  return `${rc}${ra}`
+}

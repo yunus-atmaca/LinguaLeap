@@ -1,4 +1,4 @@
-import { ALFA, COLORS } from './colors'
+import { ALFA, COLORS, randomColor, RCWithRA } from './colors'
 import * as STYLES from './styles'
 
-export { ALFA, COLORS, STYLES }
+export { RCWithRA, randomColor, ALFA, COLORS, STYLES }
