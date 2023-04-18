@@ -1,3 +1,4 @@
 import * as UserController from './user'
+import * as GameController from './game'
 
-export { UserController }
+export { GameController, UserController }

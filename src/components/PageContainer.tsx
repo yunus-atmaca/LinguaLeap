@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { View, ViewProps } from 'react-native'
 import { ScaledSheet } from 'react-native-size-matters'
 
-import { tabBarHeight } from '@src/utils'
+import { statusBarHeight, tabBarHeight } from '@src/utils'
 import { COLORS } from '@src/res'
 
 type Props = {} & ViewProps
@@ -16,6 +16,7 @@ const styles = ScaledSheet.create({
     flex: 1,
     paddingBottom: tabBarHeight,
     backgroundColor: COLORS.white,
+    //paddingTop: statusBarHeight,
   },
 })
 

@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 const Stack = createStackNavigator()
 
-import { Games, Settings } from '@src/screens'
+import { Games, Settings, WordPuzzle } from '@src/screens'
 import TabNav from './TabNav'
 
 const MainStackNav: FC = () => {
@@ -12,6 +12,7 @@ const MainStackNav: FC = () => {
       <Stack.Screen name={'TabNav'} component={TabNav} />
       <Stack.Screen name={'Games'} component={Games} />
       <Stack.Screen name={'Settings'} component={Settings} />
+      <Stack.Screen name={'WordPuzzle'} component={WordPuzzle} />
     </Stack.Navigator>
   )
 }

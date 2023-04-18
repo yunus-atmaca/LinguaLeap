@@ -34,6 +34,7 @@ export const COLORS = {
   grey6: '#969696',
   grey7: '#6B6B6B',
   grey8: '#212121',
+  transparent: 'transparent',
 }
 
 export const randomColor = () => {

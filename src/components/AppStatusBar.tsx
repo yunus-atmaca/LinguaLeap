@@ -6,6 +6,7 @@ import { statusBarHeight } from '@src/utils'
 import { COLORS } from '@src/res'
 
 const AppStatusBar: FC = ({}) => {
+  //return <StatusBar  translucent backgroundColor={COLORS.transparent} />
   return (
     <View style={styles.container}>
       <StatusBar translucent backgroundColor={COLORS.blue} />

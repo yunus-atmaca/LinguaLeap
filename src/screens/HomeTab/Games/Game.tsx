@@ -4,6 +4,7 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 import { LLText, Button } from '@src/components'
 import { COLORS } from '@src/res'
+import { getNavigationRef } from '@src/types/navigation'
 
 type Props = {
   index: number
@@ -13,6 +14,13 @@ type Props = {
 }
 
 const Game: FC<Props> = ({ description, image, index, name }) => {
+  const onGame = () => {
+    let route = 'WordPuzzle'
+    if (name === 'Crossword') route = 'Crossword'
+
+    getNavigationRef().navigate(route)
+  }
+
   return (
     <View style={styles.container} key={'key-' + index}>
       <Image style={styles.image} source={image} />
@@ -27,6 +35,7 @@ const Game: FC<Props> = ({ description, image, index, name }) => {
         buttonStyle={styles.button}
         containerStyle={styles.cButton}
         text={'Play'}
+        onClick={onGame}
       />
     </View>
   )
