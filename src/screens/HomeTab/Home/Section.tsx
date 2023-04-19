@@ -1,5 +1,11 @@
 import React, { FC } from 'react'
-import { TouchableOpacity, View, Image } from 'react-native'
+import {
+  TouchableOpacity,
+  View,
+  Image,
+  StyleProp,
+  ViewStyle,
+} from 'react-native'
 import { ScaledSheet, moderateScale } from 'react-native-size-matters'
 
 import { ALFA, COLORS, STYLES } from '@src/res'
@@ -12,16 +18,18 @@ interface ISection {
 }
 
 type Props = {
+  containerStyle?: StyleProp<ViewStyle>
   title: keyof ISection
 }
 
 const descriptions: ISection = {
   Games:
     'Learning English games are fun and effective tools for improving your language skills in an entertaining way.',
-  Grammar: '',
+  Grammar:
+    'Set of rules that explain how to use words and punctuation in English. Knowing grammar helps people communicate clearly and accurately.',
 }
 
-const Section: FC<Props> = ({ title }) => {
+const Section: FC<Props> = ({ title, containerStyle }) => {
   const getBackgroundColor = () => {
     //Games
     let c = `${COLORS.blue}${ALFA.p30}`
@@ -36,24 +44,25 @@ const Section: FC<Props> = ({ title }) => {
     return c
   }
 
-  const onClick = () => {
-    if (title === 'Games') {
-      getNavigationRef().navigate('Games')
-    }
+  const getImage = () => {
+    return title === 'Games'
+      ? require('../../../../assets/images/games.png')
+      : title === 'Grammar'
+      ? require('../../../../assets/images/grammar.png')
+      : null
   }
 
+  const onClick = () => getNavigationRef().navigate(title)
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <TouchableOpacity
         onPress={onClick}
         activeOpacity={0.6}
         style={styles.content}>
         <View style={[styles.cTop, { backgroundColor: getBackgroundColor() }]}>
           <View style={styles.iContainer}>
-            <Image
-              style={styles.image}
-              source={require('../../../../assets/images/games.png')}
-            />
+            <Image style={styles.image} source={getImage()} />
           </View>
           <LLText style={styles.title} font="TTBlack">
             {title}

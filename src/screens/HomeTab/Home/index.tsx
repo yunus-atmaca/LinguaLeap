@@ -12,6 +12,7 @@ const Home: FC = () => {
     <PageContainer style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Section title="Games" />
+        <Section containerStyle={styles.grammar} title="Grammar" />
       </ScrollView>
     </PageContainer>
   )
@@ -20,6 +21,9 @@ const Home: FC = () => {
 const styles = ScaledSheet.create({
   container: {
     paddingTop: '16@ms',
+  },
+  grammar: {
+    marginTop: '16@ms',
   },
 })
 
