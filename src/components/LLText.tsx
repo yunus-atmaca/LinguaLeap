@@ -17,6 +17,10 @@ type FONT =
   | 'TTBold'
   | 'TTBoldItalic'
 
+//Title = TTBlack
+//Subtitle = OSBold
+//Normal = RRegular
+
 type Props = {
   font?: FONT
 } & TextProps

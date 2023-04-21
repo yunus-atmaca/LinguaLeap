@@ -1,0 +1,118 @@
+{
+  "verbs": [
+    {
+      "title": "Present",
+      "subtitles": [
+        {
+          "name": "Simple present tense",
+          "example": "They walk home."
+        },
+        {
+          "name": "Present continuous tense",
+          "example": "They are walking home."
+        }
+      ]
+    },
+    {
+      "title": "Past",
+      "subtitles": [
+        {
+          "name": "Simple past tense",
+          "example": "Peter lived in China in 1965."
+        },
+        {
+          "name": "Past continuous tense",
+          "example": "I was reading when she arrived."
+        }
+      ]
+    },
+    {
+      "title": "Perfect",
+      "subtitles": [
+        {
+          "name": "Present perfect tense",
+          "example": "I have lived here since 1987."
+        },
+        {
+          "name": "Present perfect continuous",
+          "example": "I have been living here for years."
+        },
+        {
+          "name": "Past perfect",
+          "example": "We had been to see her several times before she visited us."
+        },
+        {
+          "name": "Past perfect continuous",
+          "example": "He had been watching her for some time when she turned and smiled."
+        },
+        {
+          "name": "Future perfect",
+          "example": "We will have arrived in the States by the time you get this letter."
+        },
+        {
+          "name": "Future perfect continuous",
+          "example": "By the end of your course, you will have been studying for five years."
+        }
+      ]
+    },
+    {
+      "title": "Future",
+      "subtitles": [
+        {
+          "name": "Simple future tense",
+          "example": "They will go to Italy next week."
+        },
+        {
+          "name": "Future continuous tense",
+          "example": "I will be traveling by train."
+        }
+      ]
+    },
+    {
+      "title": "Conditional",
+      "subtitles": [
+        {
+          "name": "Zero conditional",
+          "example": "If ice gets hot it melts."
+        },
+        {
+          "name": "Type 1 conditional",
+          "example": "If he is late I will be angry."
+        },
+        {
+          "name": "Type 2 conditional",
+          "example": "If he was in Australia he would be getting up now."
+        },
+        {
+          "name": "Type 3 conditional",
+          "example": "She would have visited me if she had had time."
+        },
+        {
+          "name": "Mixed conditional",
+          "example": "I would be playing tennis if I hadn't broken my arm."
+        }
+      ]
+    },
+    {
+      "title": "The -ing forms",
+      "subtitles": [
+        {
+          "name": "Gerund",
+          "example": "I like swimming."
+        },
+        {
+          "name": "Present participle",
+          "example": "She goes running every morning."
+        }
+      ]
+    },
+    {
+      "title": "Infinitives",
+      "subtitles": []
+    },
+    {
+      "title": "Passive voice",
+      "subtitles": []
+    }
+  ]
+}

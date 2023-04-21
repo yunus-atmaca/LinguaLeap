@@ -4,5 +4,14 @@ import PageContainer from './PageContainer'
 import LLText from './LLText'
 import Button from './Button'
 import LLHeader from './LLHeader'
+import Collapsible from './Test'
 
-export { LLHeader, AppStatusBar, TabBar, PageContainer, LLText, Button }
+export {
+  Collapsible,
+  LLHeader,
+  AppStatusBar,
+  TabBar,
+  PageContainer,
+  LLText,
+  Button,
+}
